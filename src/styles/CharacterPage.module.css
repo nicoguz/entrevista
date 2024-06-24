@@ -31,6 +31,9 @@
 
 .charImg {
     height: 80vh;
+    max-width: 80vh;
+    object-fit: contain;
+    overflow: hidden;
 }
 
 .icon:hover {
