@@ -1,0 +1,112 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.leftContent {
+    margin-left: 50px;
+    width: 50%;
+    height: 80%
+}
+
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+    margin-right: 50px;
+}
+
+.charImg {
+    height: 80vh;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.titleContainer {
+    margin-bottom: 80px;
+}
+
+h1 {
+    color: #333333;
+    font-size: 4rem;
+    margin: 0px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 80%
+}
+
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px; /* Space between items */
+}
+
+span {
+    color: #333333;
+    font-size: 24px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.value {
+    text-align: right;
+}
+
+.sayingsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sayingsTitle {
+    font-size: 32px;
+    color: #333333;
+}
+
+.sayings {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.saying {
+    text-align: left;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.buttonsContainer {
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+
+.button {
+    background-color: 'white';
+    color: 'black',
+}
+
+.generalContainer {
+    overflow-y: auto;
+}

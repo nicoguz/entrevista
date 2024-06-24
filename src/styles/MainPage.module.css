@@ -1,0 +1,10 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 16px; /* Space between cards */
+    padding: 16px; /* Padding around the grid */
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+}

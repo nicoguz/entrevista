@@ -6,10 +6,8 @@ const useStyles = makeStyles(() => ({
     color: 'black',
   },
   buttonsContainer: {
-    margin: 15,
-    columnGap: 15,
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
+    display: 'flex',
+    marginBottom: '20px',
   },
 }));
 

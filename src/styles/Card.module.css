@@ -1,0 +1,43 @@
+
+.generalContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 60vh;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.imgContainer {
+    display: flex;
+    height: 70%;
+    width: 100%;
+}
+.cardImg {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d8dff3;
+    height: 30%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.name {
+    text-decoration: none;
+    color: #333333;
+}
+
+h1 {
+    color: #333333
+}
