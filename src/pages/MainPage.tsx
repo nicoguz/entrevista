@@ -11,10 +11,12 @@ export default function MainPage() {
   const getData = async () => {
     try {
       const response = await fetcher('https://api.sampleapis.com/futurama/characters', 'get', null, null);
-      console.log(response);
-      setData(response);
+      if (Array.isArray(response)) {
+        setData(response);
+      } else if (response.error) {
+        setErrorMessage(response.message);
+      }
     } catch (err: any) {
-      console.log(err);
       setErrorMessage(err.message);
     }
   };
@@ -28,28 +30,33 @@ export default function MainPage() {
       <div className={styles.titleContainer}>
         <h1>Futurama Characters</h1>
       </div>
-      <div className={styles.grid}>
-        {data.map((element: Character) => {
-          let { species, homePlanet } = element;
-          if (!element.species || element.species === 'undefined') {
-            species = 'Unknown';
-          }
-          if (!element.homePlanet || element.homePlanet === 'undefined') {
-            homePlanet = 'Unknown';
-          }
-
-          return (
-            <MediaCard
-              key={element.id}
-              character={element}
-              id={element.id}
-              imgSrc={element.images.main}
-              imgAlt={element.name.first}
-              title={`${element.name.first} ${element.name.middle} ${element.name.last}`}
-              description={`${species} - ${homePlanet}`}
-            />
-          );
-        })}
+      <div className={styles.content}>
+        {errorMessage !== '' || !Array.isArray(data)
+          ? <p>{'Failed to fetch data'}</p>
+          : (
+            <div className={styles.grid}>
+              {data.map((element: Character) => {
+                let { species, homePlanet } = element;
+                if (!element.species || element.species === 'undefined') {
+                  species = 'Unknown';
+                }
+                if (!element.homePlanet || element.homePlanet === 'undefined') {
+                  homePlanet = 'Unknown';
+                }
+                return (
+                  <MediaCard
+                    key={element.id}
+                    character={element}
+                    id={element.id}
+                    imgSrc={element.images.main}
+                    imgAlt={element.name.first}
+                    title={`${element.name.first} ${element.name.middle} ${element.name.last}`}
+                    description={`${species} - ${homePlanet}`}
+                  />
+                );
+              })}
+            </div>
+          )}
       </div>
     </div>
   );

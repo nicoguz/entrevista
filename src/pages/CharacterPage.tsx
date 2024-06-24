@@ -49,7 +49,7 @@ export default function CharacterPage() {
   return (
     <div className={styles.generalContainer}>
       <div className={styles.header}>
-        <FaArrowLeft size={48} onClick={handleGoBack} className={styles.icon} />
+        <FaArrowLeft size={48} onClick={handleGoBack} className={styles.icon} id="backButton" />
       </div>
       <div className={styles.mainContent}>
         <div className={styles.leftContent}>
@@ -63,20 +63,20 @@ export default function CharacterPage() {
           </div>
           <div className={styles.description}>
             <div className={styles.infoSection}>
-              <span className={styles.title}>Planet:</span>
-              <span className={styles.value}>{newHomePlanet}</span>
+              <span className={styles.title} id='planetTitle'>Planet:</span>
+              <span className={styles.value} id='planetValue'>{newHomePlanet}</span>
             </div>
             <div className={styles.infoSection}>
-              <span className={styles.title}>Species:</span>
-              <span className={styles.value}>{newSpecies}</span>
+              <span className={styles.title} id='speciesTitle'>Species:</span>
+              <span className={styles.value} id='speciesValue'>{newSpecies}</span>
             </div>
             <div className={styles.infoSection}>
-              <span className={styles.title}>Gender:</span>
-              <span className={styles.value}>{gender}</span>
+              <span className={styles.title} id='genderTitle'>Gender:</span>
+              <span className={styles.value} id='genderValue'>{gender}</span>
             </div>
             <div className={styles.infoSection}>
-              <span className={styles.title}>Occupation:</span>
-              <span className={styles.value}>{occupation}</span>
+              <span className={styles.title} id='occupationTitle'>Occupation:</span>
+              <span className={styles.value} id='occupationValue'>{occupation}</span>
             </div>
           </div>
           <div className={styles.sayingsContainer}>
